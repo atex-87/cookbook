@@ -1,0 +1,82 @@
+$width: 472px
+.header-nav
+	height: 40px
+	background: linear-gradient(#81bae8, #4a84cb)
+	border: 1px solid #579cd1
+	border-left-color: linear-gradient(#579cd1, #2a5893)
+	border-right-color: linear-gradient(#579cd1, #2a5893)
+	border-bottom-color: #2a5893
+	border-radius: 3px
+	display: flex
+	justify-content: space-between
+	box-shadow: 0px 7px 9px 0px rgba(84, 81, 81, 0.47)
+	position: absolute
+	width: $width
+	font-size: 13px
+	&-botton
+		height: 40px
+		vertical-align: moddle
+		line-height: 40px
+		color: #1b4680
+		transition: .2s
+		overflow: hidden
+		position: relative
+		z-index: 2
+		padding-right: 17px
+		margin-left: -10px
+		padding-left: 45px
+		cursor: pointer
+		&:hover
+				color: #fff
+		&:not(:last-child)		
+			&:before, &:after
+				content: ''
+				display: block
+				width: calc(100% + 15px)
+				height: 50%
+				transform: skewX(20deg)
+				border-right: 1px solid #1b4680
+				position: absolute
+				z-index: -1
+				left: -20px
+				border-radius: 5px 0px 0px 0px
+				background: linear-gradient(#81bae8, #649ed9)
+			&:after
+				background: linear-gradient(#649ed9, #4a84cb)
+				top: 50%
+				transform: skewX(-20deg)
+				border-radius: 5px 0px 0px
+		i
+			display: block
+			position: absolute
+			width: 20px
+			height: 100%
+			background-repeat: no-repeat
+			background-position: center
+			left: 18px
+		&.description 
+			z-index: 5
+			margin-left: 0
+			padding-left: 35px			
+			i
+				background-image: url(./img/notepad.png)
+				left: 8px
+		&.ingredients
+			z-index: 4
+			i
+				background-image: url(./img/bottle.png)
+		&.options
+			z-index: 3		
+			i
+				background-image: url(./img/plate.png)
+		&.glasses
+			&.active
+				background: linear-gradient(#62a2d6, #3668a6)
+			i
+				background-image: url(./img/boc.png)
+		&.active
+			color: #fff
+			&:before
+				background: linear-gradient(#62a2d6, #4f88c1)	
+			&:after
+				background: linear-gradient(#4f88c1, #3668a6)		
