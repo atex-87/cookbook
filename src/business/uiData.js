@@ -1,5 +1,7 @@
+/* eslint-disable */
+
 let data;
-export default data = {
+export default data = JSON.stringify({
     tabsName: {
         en: [
             'description',
@@ -15,9 +17,21 @@ export default data = {
         ],
     },
     description: {
-        cocktailname: 'Название коктейля',
-        alternativename: 'Альтернативное название через запятую',
-        cocktaildescription: 'Краткое описание',
-        instructions: 'Инструкция для приготовления',
+        cocktailname: {
+            placeholder: 'Название коктейля',
+            type: 'input text'
+        },
+        alternativename: {
+            placeholder: 'Альтернативное название через запятую',
+            type: 'input text'
+        },
+        cocktaildescription: {
+            placeholder: 'Краткое описание',
+            type: 'input text'
+        },
+        instructions:{
+            placeholder:  'Инструкция для приготовления',
+            type: 'textarea'
+        },
     },
-};
+});
